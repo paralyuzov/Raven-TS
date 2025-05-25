@@ -17,6 +17,20 @@ let resizeObserver: ResizeObserver | null = null;
 
 const messages = computed<Message[]>(() => messageStore.messages);
 
+function getMediaUrl(content: string): string {
+  if (content.startsWith('http://') || content.startsWith('https://')) {
+    return content;
+  }
+  
+  const baseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
+  
+  if (content.startsWith('/')) {
+    return `${baseUrl}${content}`;
+  }
+  
+  return `${baseUrl}/${content}`;
+}
+
 function scrollToBottom(delay = 0) {
   const scrollFn = () => {
     messagesEnd.value?.scrollIntoView({ behavior: "smooth" });
@@ -154,7 +168,7 @@ defineExpose({
         
         <div v-else-if="msg.type === 'image'" class="image-message">
           <img
-            :src="msg.content"
+            :src="getMediaUrl(msg.content)"
             :alt="msg.originalFileName || 'Image'"
             class="max-w-full h-auto rounded-xl cursor-pointer hover:opacity-90 transition-opacity"
             style="max-height: 300px; min-width: 150px;"
@@ -170,7 +184,7 @@ defineExpose({
         
         <div v-else-if="msg.type === 'video'" class="video-message">
           <video
-            :src="msg.content"
+            :src="getMediaUrl(msg.content)"
             controls
             class="max-w-full h-auto rounded-xl"
             style="max-height: 300px; min-width: 200px;"
