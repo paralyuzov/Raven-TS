@@ -31,7 +31,7 @@ defineEmits(['click']);
 <template>
   <button @click="$emit('click')"
     class="relative flex flex-col items-center justify-center p-2 rounded-xl transition-all duration-300 min-w-[64px]"
-    :class="isActive ? 'bg-gradient-to-br from-sky-500 to-blue-600 text-white shadow-lg shadow-sky-700/30 hover:shadow-xl hover:shadow-sky-700/40' : 'text-gray-400 hover:text-white hover:bg-slate-700/50'">
+    :class="isActive ? 'bg-gradient-to-br from-sky-500 to-blue-600 text-white shadow-lg shadow-sky-700/30 hover:shadow-xl hover:shadow-sky-700/40' : 'text-gray-400 hover:text-blue-600'">
     <div class="relative flex items-center justify-center h-10 w-10 rounded-full transition-transform"
       :class="isActive ? 'scale-110' : 'hover:scale-110'">
       <FontAwesomeIcon :icon="icon" class="text-xl sm:text-2xl" />

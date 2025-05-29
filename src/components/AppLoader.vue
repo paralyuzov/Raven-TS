@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <transition name="fade">
-    <div v-if="show" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/90 backdrop-blur-sm">
+    <div v-if="show" class="fixed inset-0 z-50 flex items-center justify-center dark:bg-slate-900/90 backdrop-blur-sm">
       <div class="flex flex-col items-center">
         <div class="w-20 h-20 border-4 border-t-blue-500 border-r-transparent border-b-sky-500 border-l-transparent rounded-full animate-spin"></div>
         <div class="mt-8">

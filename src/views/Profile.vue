@@ -156,7 +156,7 @@ const deleteAccount = async () => {
         class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden mb-8"
       >
         <div
-          class="bg-gradient-to-r from-gray-800/90 to-gray-700/60 px-8 py-12 text-white relative overflow-hidden"
+          class="bg-gradient-to-r from-slate-200/30 to-slate-200/50 px-8 py-12 text-white relative overflow-hidden"
         >
           <div class="absolute inset-0 bg-black/10"></div>
 

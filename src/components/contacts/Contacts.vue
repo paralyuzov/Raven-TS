@@ -55,7 +55,7 @@ async function handleSelectContact(contact: any) {
 </script>
 
 <template>
-  <div class="min-h-screen bg-gradient-to-b from-slate-900 to-slate-950 text-slate-200">
+  <div class="min-h-screen dark:bg-gradient-to-b from-slate-900 to-slate-950 text-slate-200">
     <div class="flex h-screen">
       <div v-if="isLoading" class="w-full flex items-center justify-center">
         <div class="flex flex-col items-center gap-4">

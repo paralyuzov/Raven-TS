@@ -39,7 +39,7 @@ const selectContact = (contact: Contact) => {
 </script>
 
 <template>
-  <div class="w-full md:w-80 flex-shrink-0 flex flex-col bg-gray-50/80 dark:bg-gray-900/95 backdrop-blur-xl border-r border-gray-200/50 dark:border-gray-700/50">
+  <div class="w-full md:w-80 flex-shrink-0 flex flex-col bg-gray-50/90 dark:bg-gray-900/95 backdrop-blur-xl border-r border-gray-200/50 dark:border-gray-700/50">
     <header class="sticky top-0 z-30 bg-gray-50/95 dark:bg-gray-900/95 backdrop-blur-xl border-b border-gray-200/30 dark:border-gray-700/30 px-6 py-5">
       <div class="flex justify-between items-center mb-6">
         <div>
@@ -62,7 +62,7 @@ const selectContact = (contact: Contact) => {
           @input="searchContacts"
           type="text" 
           placeholder="Search conversations" 
-          class="w-full bg-white/80 dark:bg-gray-800/80 text-gray-900 dark:text-gray-100 rounded-2xl px-4 py-3.5 pl-12 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:bg-white dark:focus:bg-gray-800 transition-all duration-200 placeholder-gray-400 dark:placeholder-gray-500 text-sm font-medium shadow-sm border border-gray-200/50 dark:border-gray-700/50 focus:border-blue-300 dark:focus:border-blue-500"
+          class="w-full bg-gray-100/80 dark:bg-gray-800/80 text-gray-900 dark:text-gray-100 rounded-2xl px-4 py-3.5 pl-12 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:bg-white dark:focus:bg-gray-800 transition-all duration-200 placeholder-gray-400 dark:placeholder-gray-500 text-sm font-medium shadow-sm border border-gray-200/50 dark:border-gray-700/50 focus:border-blue-300 dark:focus:border-blue-500"
         />
         <div class="absolute left-4 top-1/2 transform -translate-y-1/2 p-1">
           <svg class="w-4 h-4 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -80,7 +80,7 @@ const selectContact = (contact: Contact) => {
           class="relative group flex items-center gap-4 p-4 rounded-2xl transition-all duration-200 cursor-pointer hover:scale-[1.01] active:scale-[0.99] backdrop-blur-sm"
           :class="{
             'bg-blue-500 text-white shadow-lg shadow-blue-500/25': selectedContactId === contact._id,
-            'bg-white/70 dark:bg-gray-800/70 hover:bg-white dark:hover:bg-gray-800 border border-gray-200/30 dark:border-gray-700/30 hover:border-gray-300 dark:hover:border-gray-600 shadow-sm hover:shadow-md': selectedContactId !== contact._id
+            'bg-white/70 dark:bg-gray-600/70 hover:bg-white dark:hover:bg-gray-800 border border-gray-200/30 dark:border-gray-700/30 hover:border-gray-300 dark:hover:border-gray-600 shadow-sm hover:shadow-md': selectedContactId !== contact._id
           }"
           @click="selectContact(contact)"
         >
